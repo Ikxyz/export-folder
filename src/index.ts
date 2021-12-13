@@ -33,7 +33,7 @@ const exportAll = async (path: string): Promise<string | undefined> => {
             }
         }
 
-        if (dir[i].endsWith('.dart') && !dir[i].endsWith(fileName + '.dart')) {
+        if (dir[i].endsWith('.dart') && !dir[i].endsWith('_' + fileName + '.dart')) {
             files.push(dir[i]);
         }
 
@@ -42,14 +42,14 @@ const exportAll = async (path: string): Promise<string | undefined> => {
     if (files.length == 0) return;
 
     const fileExtension = '.dart';
-    const filePath = `${path}/${fileName}${fileExtension}`;
+    const filePath = `${path}/_${fileName}${fileExtension}`;
     const content = files.map((e) => `export '${e}';\n`).join('');
 
-    console.log(filePath);
+    console.log('exported --> ', filePath);
 
     await _fs.writeFile(filePath, content, _ => _);
 
-    return `./${fileName}/${fileName}${fileExtension}`;
+    return `./${fileName}/_${fileName}${fileExtension}`;
 }
 
 const statExport = () => {

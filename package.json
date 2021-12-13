@@ -8,7 +8,7 @@
 	"main": "bin/index.js",
 	"scripts": {
 		"start": "node bin/index.js",
-		"serve": "ts-node src/index.ts",
+		"serve": "nodemon src/index.ts",
 		"deploy": "git add . ; git commit ; git push ; npm publish ; npm version patch",
 		"build": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
