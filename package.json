@@ -3,7 +3,7 @@
 	"engines": {
 		"node": "12.22.7"
 	},
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "export folder",
 	"main": "bin/index.js",
 	"scripts": {
@@ -24,7 +24,9 @@
 		"url": "https://github.com/Ikxyz/export-folder.git/issues"
 	},
 	"homepage": "https://github.com/Ikxyz/export-folder.git",
-	"keywords": ["dart"],
+	"keywords": [
+		"dart"
+	],
 	"author": "ikxyz <jointtask.ng@gmail.com> (https://github.com/ikxyz)",
 	"license": "ISC"
 }
